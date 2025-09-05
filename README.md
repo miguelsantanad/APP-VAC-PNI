@@ -1,7 +1,7 @@
 # APP-VAC-PNI
 
 Configurar Bono Escolar en las Diferentes Ambientes ya se Produccion o Desarrollo.
-# Consulta a estructura Bono A mil
+# Consulta Para Desarroladores Bono A mil
 https://deepwiki.com/miguelsantanad/APP-VAC-PNI
 
 
