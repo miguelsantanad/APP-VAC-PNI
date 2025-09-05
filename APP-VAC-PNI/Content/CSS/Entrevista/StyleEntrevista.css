@@ -1,0 +1,144 @@
+﻿._mt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+}
+
+._bc {
+    border-right: 1px solid #000;
+    background-color: #80808045
+}
+
+._dbc {
+    background-color: white;
+    border-left: 1px solid #000;
+}
+
+._cfd {
+    border-style: groove;
+    border-top-width: 5px;
+    border-right-width: 2px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left-width: 2px;
+    border-bottom-width: 10px;
+}
+
+._cfde {
+    border-style: groove;
+    border-top-width: 5px;
+    border-right-width: 2px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left-width: 2px;
+    /*border-bottom-width: 10px;*/
+}
+
+
+._cblock {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+._txt-vert {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: center;
+    margin-top: 200px;
+}
+
+/*._div-vert {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 21px;
+    left: 50%;
+}*/
+
+.col-md-1 {
+    width: 4%;
+}
+
+._bcm {
+    border: 1px solid #000;
+}
+
+._clg {
+    background-color: #80808045
+}
+
+.card {
+    min-height: 200px;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+._customLabel {
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.card {
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 0;
+    box-shadow: 0px 0px 8px 0.3px rgba(0,0,0,1);
+}
+
+.card-text {
+    font-size: 85%;
+}
+
+@media (max-width:767px) {
+    .card-deck {
+        display: block;
+    }
+}
+
+._mtsp {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 812.98px) {
+    .col-md-1 {
+        width: auto;
+    }
+    ._txt-vert {
+        writing-mode: initial;
+        transform: initial;
+        text-align: center;
+        margin-top: 0px;
+    }
+    ._divRdio {
+        margin-left: 157px;
+    }
+    ._clg {
+        background-color: #80808000;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 991.98px) {
+ 
+    ._divRdio {
+        margin-left: 0px;
+    }
+    ._clg {
+        background-color: #80808000;
+    }
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

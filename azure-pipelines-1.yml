@@ -1,0 +1,42 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- main
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.0.x'
+
+# (si DocFX no viene con la tarea anterior, instálalo)
+- powershell: |
+    dotnet tool install -g docfx
+    echo "##vso[task.prependpath]$env:USERPROFILE\.dotnet\tools"
+    docfx --version
+  displayName: "Instalar DocFX (global)"
+
+# Tu tarea Windows-only
+- task: AzureDevOpsWikiToDocFx@3
+  inputs:
+    SourceFolder: 'APP-VAC-PNI'
+    TargetFolder: 'docs'
+
+# (si vas a publicar al Wiki Git)
+- powershell: |
+    git config --global user.email "miguel.santanad@minerd.gob.do"
+    git config --global user.name "Miguel Santana"
+    $wikiUrl = "https://$(ORG)@dev.azure.com/$(ORG)/$(PROJECT)/_git/$(PROJECT).wiki"
+    git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" clone $wikiUrl wiki
+    robocopy docs wiki /MIR
+    cd wiki
+    git add .
+    git commit -m "CI: actualizar Wiki (DocFX) $(Build.BuildNumber)" || echo "Sin cambios"
+    git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origin HEAD:main
+  displayName: "Publicar en Wiki Git"

@@ -1,0 +1,40 @@
+   @media only screen and (min-width: 995px) and (max-width: 1199px) {
+   
+
+   }
+
+   @media only screen and (min-width: 769px) and (max-width: 995px) {
+
+   .serviciosList li.tool span.info, .serviciosList li.tool span.enter {right: 3px;}
+   }  
+
+   @media only screen and (min-width: 560px) and (max-width: 768px) {
+   
+   .botonesAccesos {height: 125px; padding: 0 0 40px 0;}
+   .botonesAccesos a.btn {width: calc(100% - 20px);margin: 0 0 10px 0;}
+   .serviciosList li.tool span.info, .serviciosList li.tool span.enter {right: 3px;}
+   }
+   
+   @media only screen and (max-width: 560px)  {
+   
+   .botonesAccesos {height: 125px; padding: 0 0 40px 0;}
+   .botonesAccesos a.btn {width: calc(100% - 20px);margin: 0 0 10px 0;}
+   
+   }
+
+   @media only screen and (max-width: 479px) {
+
+   .rightBox {display: none;}
+   .leftBox {width: 82%;}
+   .footerText {width: 260px;left: calc(50% - 130px);bottom: -60px;}
+   .serviciosList li.tool span.info, .serviciosList li.tool span.enter {display: none;}
+   }
+
+   @media only screen and (max-width: 357px) {
+   
+   .leftBox {width: 75%;}
+    
+   }
+
+
+

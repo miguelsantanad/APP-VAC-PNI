@@ -1,0 +1,1334 @@
+/**Clases generales**/
+
+.boxid_ {
+    display: inline-table;
+    width: 100%;
+    /* float: left; */
+}
+
+
+
+.l_hidden {
+    display: none;
+}
+
+
+
+/*** ESTILOS BARRA PRINCIPAL DE MENU ***/
+
+
+
+.primaryNav ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+    .primaryNav ul li {
+        list-style: none;
+    }
+
+
+
+.primaryNav > ul > li > div {
+    position: absolute;
+    display: none;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    right: 0;
+    box-shadow: 0 5px 9px -4px rgba(0,0,0,0.2);
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    overflow: hidden;
+    padding: 18px 0px;
+    min-height: 340px;
+}
+
+
+
+.primaryNav > ul > li {
+    float: left;
+}
+
+
+
+    .primaryNav > ul > li > a, .primaryNav > ul > li > span {
+        display: block;
+        padding: 13px 14px 13px 14px;
+        text-transform: uppercase;
+        font-size: 12px;
+        transition: ease all 0.3s;
+        cursor: pointer;
+        box-shadow: inset 0 4px 0 0 rgba(63, 169, 245, 0), inset 0 40px 30px -30px rgba(0, 86, 166, 0);
+        color: #556484;
+        position: relative;
+    }
+
+    .primaryNav > ul > li.active > a {
+        background: #fff;
+        color: #0056a6;
+        box-shadow: inset 0 4px 0 0 #3fa9f5, inset 0 -40px 30px -30px rgba(0, 86, 166, 0);
+    }
+
+    .primaryNav > ul > li.parent > a, .primaryNav > ul > li.parent > span {
+        padding: 13px 26px 13px 14px;
+    }
+
+    .primaryNav > ul > li:hover > a, .primaryNav > ul > li:hover > span, .primaryNav > ul > li > a:focus, .primaryNav > ul > li > a:visited {
+        background: #fff;
+        color: #0056a6 !important;
+        box-shadow: inset 0 4px 0 0 #3fa9f5, inset 0 -40px 30px -30px rgba(0, 86, 166, 0);
+    }
+
+
+
+.primaryNav {
+    display: table;
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+}
+
+
+
+.boxid_.nav {
+    background: #ffffff;
+    padding: 0;
+    border-top: 1px solid #fff;
+    box-shadow: 0px 10px 10px -10px rgba(57, 71, 107, 0.16);
+   /* z-index: 999 !important;*/
+    position: relative;
+    border-top: 1px solid #ececec;
+}
+
+
+
+.primaryNav > ul > li:hover > div, .primaryNav > ul > li:focus > div, .primaryNav > ul > li:active > div {
+    display: block;
+}
+
+
+
+.primaryNav > ul > li.parent > a:after, .primaryNav > ul > li.parent > span:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 46%;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 0px solid #EAECEE;
+    border-top: 4px solid #EAECEE;
+    transition: 0.6s;
+}
+
+
+
+.primaryNav > ul > li.parent:hover > a:after, .primaryNav > ul > li.parent:hover > span:after {
+    border-top-color: #3fa9f5;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    right: 10px;
+}
+
+
+
+/*** FIN ESTILOS BARRA PRINCIPAL DE MENU ***/
+
+
+
+/*** CONTENDEDOR SUB MENU ***/
+
+
+
+.primaryNav .ctnChild_1 ul {
+    float: left;
+    margin-right: 10px;
+    min-width: 20%;
+    max-width: 70%;
+}
+
+
+
+.primaryNav .ctnChild_1 > ul {
+    margin-left: 10px;
+}
+
+
+
+    .primaryNav .ctnChild_1 > ul > li > a, .primaryNav .ctnChild_1 > ul > li > div {
+        margin: 0 0 0px 0;
+        color: #0056a6;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+
+.primaryNav .ctnChild_1 ul li a.active, .ctnChild_1 ul li div.active {
+    color: #3fa9f5 !important;
+}
+
+
+
+.primaryNav .ctnChild_1 ul li {
+    font-size: 13px;
+    cursor: pointer;
+    padding: 10px 0 10px 0px;
+    transition: 0.5s;
+    font-weight: 300;
+    outline: none;
+    width: 100%;
+    display: block;
+}
+
+
+
+.primaryNav .titleList {
+    color: #0056a6;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 36px;
+    margin: 0 0 10px 0;
+}
+
+
+
+.primaryNav h3 {
+    font-size: 14px;
+    color: #0056a6;
+    margin: 0 0 10px 0;
+}
+
+
+
+.primaryNav p {
+    font-size: 13px;
+    font-family: 'Open Sans';
+    margin: 4px 0 15px 0;
+    text-align: justify;
+    color: #404040;
+}
+
+
+
+.itemTab.quienes-somos, .dependencias, .despacho-ministro, .areas-institucionales {
+    position: relative;
+    border-left: 1px solid #f1f1f1;
+    height: 355px;
+    padding: 0 0 0 25px;
+}
+
+
+
+.ctnTabNav, .itemTab {
+    float: none;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 248px;
+    overflow: hidden;
+}
+
+
+
+    .ctnTabNav .quienes-somos {
+        box-shadow: inset 460px 80px 230px 0px #fff;
+        background-image: url(../img/edificio-educacion.jpg);
+    }
+
+
+
+    .ctnTabNav .dependencias {
+        background-image: url(../img/edificio-educacion.jpg);
+    }
+
+
+
+    .ctnTabNav .despacho-ministro {
+        background-image: url(../img/ministro.jpeg);
+    }
+
+
+
+    .ctnTabNav .areas-institucionales {
+        background-image: url(../img/edificio-educacion.jpg);
+    }
+
+
+
+.primaryNav .itemTab.quienes-somos .ctnTagList {
+    min-width: 40%;
+    max-width: 50%;
+    display: block;
+    float: inherit;
+}
+
+
+
+.primaryNav #frase-ministro {
+    display: block;
+    background: rgba(234, 236, 238, 0.88);
+    padding: 20px;
+    margin: 40px 0 0 0;
+    font-size: 18px;
+    font-family: 'open sans';
+    font-style: italic;
+    color: #5386b5;
+    position: absolute;
+    width: 80%;
+    border-left: 4px solid #5386b5;
+    bottom: 30px;
+}
+
+
+
+/* TIPO DE LISTA */
+
+
+
+#ctnTagList li {
+    background: rgba(63, 169, 245, 0.1);
+    color: #5386b5;
+    display: inline-block;
+    padding: 5px 8px;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin: 2px 0px;
+    cursor: inherit;
+}
+
+
+
+.primaryNav .ctnChild_1 #ctnTagList {
+    width: 100%;
+    display: block;
+    float: none;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+.primaryNav .itemTab.quienes-somos a.viewmoreTabNav, .itemTab.dependencias a.viewmoreTabNav, .itemTab.despacho-ministro a.viewmoreTabNav, .itemTab.areas-institucionales a.viewmoreTabNav, #servicios a.viewmoreTabNav, .btnNoticiasPortada a.viewmoreTabNav {
+    font-size: 13px;
+    color: #0056a6;
+    cursor: pointer;
+    border: 1px solid rgba(179, 212, 252, 0.52);
+    padding: 6px 12px 6px 12px;
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+
+
+
+    .primaryNav .itemTab.quienes-somos a:hover, .itemTab.dependencias a:hover, .itemTab.despacho-ministro a:hover, .itemTab.areas-institucionales a:hover, #servicios a.viewmoreTabNav:hover {
+        color: #ffffff;
+        background: #0056a6;
+        border: 1px solid rgba(0, 86, 166, 0);
+    }
+
+
+
+/* TIPO DE LISTA */
+
+
+
+.ctnBtn {
+    display: block;
+}
+
+
+
+/*** FIN CONTENDEDOR SUB MENU ***/
+
+
+
+
+
+/*** COMUNICACIONES ***/
+
+
+
+.primaryNav .widgetTabNav_noticias {
+    float: left;
+    min-width: 20%;
+    max-width: 24%;
+    margin: 0 28px 0 0;
+}
+
+
+
+.primaryNav .widgetTabNav_galerias {
+    float: left;
+    width: 20%;
+    /* margin: 0 28px 0 0; */
+}
+
+
+
+.primaryNav .widgetTabNav_transmisiones {
+    float: left;
+    min-width: 20%;
+    max-width: 26%;
+    margin: 0 28px 0 0;
+}
+
+
+
+.primaryNav .imageTabNav {
+    width: 100%;
+    height: 160px;
+    float: left;
+    display: block;
+    margin: 0 0 10px 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+
+
+.primaryNav .transmisionesTabNav {
+    width: 100%;
+    height: 160px;
+    background: #eaecee;
+    float: left;
+    display: block;
+    margin: 0 0 0 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+
+.primaryNav .titleTabNav {
+    margin: 0 0 5px 0;
+}
+
+
+
+.primaryNav .textTabNav {
+    font-size: 12px;
+    color: #808080;
+    font-weight: 100;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 16px;
+}
+
+
+
+.primaryNav .vermasTabNav {
+    font-size: 12px;
+    margin: 8px 0 0 0;
+    color: #3fa9f5;
+    padding: 5px 8px;
+    border: 1px solid #b3d4fc;
+    float: left;
+    display: block;
+}
+
+
+
+.primaryNav .transmisionesTabNav ul li a {
+    line-height: 16px;
+    padding: 0 0 12px 0;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+
+
+.widgetTabNav_galerias .imageTabNav {
+    max-height: 100px;
+}
+
+
+
+.primaryNav #servicios .ctnChild_1 ul li {
+    padding: 8px 0 8px 0px;
+}
+
+
+
+.primaryNav #servicios .ctnChild_1 ul {
+    max-width: 20%;
+}
+
+
+
+.primaryNav .ctnChild_1 .widgetTabNav_transmisiones ul li {
+    /* border-top: 1px solid #eaecee; */
+    outline: none;
+    padding: 10px 0 0px 0;
+    max-height: 36px;
+    overflow: hidden;
+    margin: 0;
+}
+
+
+
+.primaryNav .imageTabNav img {
+    width: auto;
+    min-width: 124%;
+    position: absolute;
+    left: -25%;
+    top: -12%;
+}
+
+
+
+.primaryNav #comunicaciones .titleTabNav a {
+    font-weight: 400;
+    line-height: 17px;
+    font-size: 13px;
+    color: #1d1d1d;
+    display: inline-block;
+    cursor: pointer;
+    transition: ease all 0.3s;
+}
+
+
+
+/*** FIN COMUNICACIONES ***/
+
+
+
+
+
+/*** ICONOS ***/
+
+
+
+.active .icPrimaryNav.icon {
+    color: #3fa9f5;
+}
+
+
+
+.icPrimaryNav.bullet.icon {
+    font-size: 10px;
+    color: #3fa9f5;
+    line-height: 27px;
+}
+
+
+
+.itemTab .icPrimaryNav.bullet.icon + a {
+    position: relative;
+    left: 15px;
+    line-height: 14px;
+    text-decoration: none;
+}
+
+
+
+.icPrimaryNav.icon {
+    font-size: 2em;
+    float: left;
+    display: inline-block;
+    color: #5386b5;
+    margin-right: 6px;
+    margin-top: -3px;
+}
+
+
+
+
+
+.linkTabNav.active:before {
+    content: "";
+    position: absolute;
+    height: 65%;
+    left: -14px;
+    width: 2px;
+    background: #3fa9f5;
+    top: 25%;
+}
+
+
+
+.icon.underline:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -6px;
+    left: 0;
+    background: #3fa9f5;
+}
+
+
+
+.underline.icon {
+    position: relative;
+}
+
+
+
+/*** FIN ICONOS ***/
+
+
+
+.titleList.ministro {
+    font-size: 21px;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background: #5386b5;
+    font-family: 'Open Sans';
+}
+
+
+
+.primaryNav a.linkServicios:hover {
+    color: #3fa9f5;
+    text-decoration: underline;
+}
+
+
+
+.primaryNav .itemTab {
+    padding: 20px 20% 56px 20px;
+    */ background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
+    left: 0;
+    background-size: contain;
+}
+
+
+
+.ctnTabNav .despacho-del-ministro {
+    background-image: url(../img/ministro.jpeg);
+}
+
+
+
+/** GRADIENT FOTO DE MENU
+
+.primaryNav .itemTab:after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 45%;
+
+    bottom: 0;
+
+    top: 0;
+
+    background: #fff;
+
+    box-shadow: 30px 0px 140px 122px #fff;
+
+    z-index: 0;
+
+}
+
+**/
+
+
+
+.primaryNav .itemTab * {
+    z-index: 1;
+    position: relative;
+}
+
+
+
+#servicios .ctnChild_1 {
+    background-image: url(../img/servicios.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    left: 0;
+    background-size: contain;
+}
+
+
+
+#servicios .ctnChild_1 {
+    box-shadow: inset 600px 158px 250px 35px #fff;
+}
+
+
+
+.vermasTabNav:hover {
+    background: #5386b5;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+.primaryNav .widgetTabNav_transmisiones li a {
+    /* display: inline-block; */
+    /* text-decoration: none; */
+    /* color: #1d1d1d; */
+    /* font-size: 13px; */
+    /* line-height: 17px; */
+    /* padding: 0; */
+}
+
+
+
+.primaryNav .widgetTabNav_transmisiones ul {
+    display: table;
+    min-width: 100%;
+}
+
+
+
+/* MOBILE */
+
+
+
+.boxid_.navMobile {
+    padding: 0;
+    min-height: 54px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.navMobile .barNav {
+    position: relative;
+    background: #fff;
+}
+
+
+
+.ctnSearchMobile {
+    float: left;
+    width: calc(100% - 60px);
+    /* background: #000000; */
+    position: relative;
+    padding: 10px 0;
+    height: 34px;
+}
+
+
+
+.boxinput input {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 0;
+    line-height: inherit;
+    outline: none;
+    bottom: 0;
+    width: 90%;
+    background: transparent;
+    text-transform: inherit;
+}
+
+
+
+.boxinput {
+    height: 30px;
+    border: 2px solid rgb(32, 128, 206);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    width: calc(90% - 8px);
+    /* margin-left: 5%; */
+    margin-right: 5%;
+    background: #fff;
+    line-height: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: Roboto;
+}
+
+
+
+.ctnSearchMobile form {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.ctnBtnNavMobile {
+    float: right;
+    width: 60px;
+    height: 54px;
+    background: rgba(63,169,245,0.1);
+    transition: ease all 0.3s;
+    cursor: pointer;
+}
+
+    .ctnBtnNavMobile:active {
+        background: rgba(63,169,245,0.2);
+    }
+
+
+
+.btn_navMobile {
+    position: relative;
+    margin: 8px 0;
+    transition: all ease 0.3s;
+}
+
+
+
+    .btn_navMobile svg {
+        width: 40%;
+        margin: 0 auto;
+        display: block;
+        height: 34px;
+    }
+
+
+
+        .btn_navMobile svg rect {
+            fill: rgb(32, 128, 206);
+            display: block;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+
+
+    .btn_navMobile.active svg .gh-svg-rect-top {
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        transform: rotate(45deg);
+        margin- +le:;
+        x: 30px;
+        y: 0px;
+    }
+
+
+
+    .btn_navMobile.active svg .gh-svg-rect-bottom {
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        x: -55px;
+        y: 70px;
+    }
+
+    .btn_navMobile.active svg .gh-svg-rect-center {
+        opacity: 0;
+    }
+
+
+
+    .btn_navMobile.active {
+        margin: 8px 0px 0px -4px;
+    }
+
+
+
+.primaryNavMobile {
+    /* background: rgb(63, 169, 245); */
+    position: relative;
+    display: table;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+    /* Old browsers */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+
+
+    .primaryNavMobile li {
+        display: block;
+        padding: 12px 0px;
+        margin: 0 0px 0 0px;
+        color: #ffffff;
+        text-transform: uppercase;
+        transition: ease 0.5s;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 15px;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(0, 86, 185, 0.5);
+    }
+
+
+
+        .primaryNavMobile li a {
+            color: inherit !important;
+            display: block !important;
+        }
+
+
+
+    .primaryNavMobile ul {
+        margin: 0;
+        padding: 20px 0 30px 0;
+        position: relative;
+    }
+
+
+
+    .primaryNavMobile li.active {
+        border-bottom: 1px solid rgba(0, 86, 185, 0);
+    }
+
+
+
+    .primaryNavMobile li.linkTabNavMobile:after {
+        content: "+";
+        float: right;
+        color: #b3d4fc;
+        font-size: 18px;
+        line-height: 18px;
+        -webkit-animation-name: iconRotate; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
+        animation-name: iconRotate;
+        animation-duration: 0.3s;
+    }
+
+    .primaryNavMobile li.active.linkTabNavMobile:after {
+        display: none;
+        content: "+";
+        float: right;
+        color: #b3d4fc;
+        font-size: 18px;
+        line-height: 18px;
+        -webkit-animation-name: iconRotate; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
+        animation-name: iconRotate;
+        animation-duration: 0.3s;
+    }
+
+
+
+    .primaryNavMobile li.linkTabNavMobile:before {
+        content: "-";
+        display: none;
+        float: right;
+        color: #b3d4fc;
+        font-size: 24px;
+        line-height: 18px;
+        -webkit-animation-name: iconRotate; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
+        animation-name: iconRotate;
+        animation-duration: 0.3s;
+        transition: 0.3s;
+    }
+
+    .primaryNavMobile li.active.linkTabNavMobile:before {
+        content: "-";
+        font-family: arial;
+        float: right;
+        display: block;
+        color: #b3d4fc;
+        font-size: 24px;
+        line-height: 18px;
+        -webkit-animation-name: iconRotate; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
+        animation-name: iconRotate;
+        animation-duration: 0.3s;
+        transition: 0.3s;
+        transition: 0.3s;
+    }
+
+
+
+    .primaryNavMobile .ctnChild_mobile a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 15px 12px 15px;
+        text-transform: uppercase;
+        font-size: 12px;
+        transition: ease 0.5s;
+    }
+
+
+
+    .primaryNavMobile .ctnChild_mobile ul {
+        padding: 0 50px;
+        /* transition: all ease 0.3s; */
+        height: 100%;
+        position: relative;
+        border-bottom: 1px solid rgba(0, 86, 185, 0.5);
+    }
+
+
+
+    .primaryNavMobile .ctnChild_mobile a:before {
+        content: "";
+        color: rgba(179, 212, 252, 0.52);
+        box-shadow: -31px 10px 0px 1px;
+        display: block;
+        width: 15px;
+    }
+
+
+
+    .primaryNavMobile .ctnChild_mobile a:after {
+        float: right;
+        color: #b3d4fc;
+    }
+
+
+
+    .primaryNavMobile .ctnChild_mobile a:hover {
+        /* background: rgba(179, 212, 252, 0.52); */
+        cursor: pointer;
+    }
+
+
+
+    .primaryNavMobile .ctnChild_mobile ul:before {
+        background: rgba(179, 212, 252, 0.52);
+        content: "";
+        width: 2px;
+        position: absolute;
+        top: 0px;
+        left: 33px;
+        bottom: 17px;
+    }
+
+
+
+    .primaryNavMobile .linkTabNavMobile li {
+        background: #cc6363;
+    }
+
+
+
+    .primaryNavMobile.hidden.animat {
+        height: 0;
+    }
+
+
+
+    .primaryNavMobile .ctnChild_mobile {
+        transition: ease 1s;
+        height: auto;
+    }
+
+
+
+.ctnChild_mobile.hidden_a ul {
+    height: 0;
+}
+
+
+
+/* animaciones css */
+
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes iconRotate {
+
+    from {
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+        transform: rotate(0deg)
+    }
+
+    to {
+        -ms-transform: rotate(180deg); /* IE 9 */
+        -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+        transform: rotate(180deg);
+    }
+}
+
+
+
+/* Standard syntax */
+
+@keyframes iconRotate {
+
+    from {
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+        transform: rotate(0deg)
+    }
+
+    to {
+        -ms-transform: rotate(180deg); /* IE 9 */
+        -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+        transform: rotate(180deg);
+    }
+}
+
+
+
+.primaryNav .ctnChild_1 ul li:hover {
+    color: #000 !important;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+.boxid_.navTopFixed {
+    position: fixed;
+    top: 0;
+    border-top: 1px solid #2793e6;
+}
+
+
+
+.primaryNav #servicios .ctnChild_1 ul div.ctnBtn {
+    margin-top: 14px;
+}
+
+
+
+.primaryNav #servicios .ctnChild_1 > ul > li > a {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 85%;
+    display: block;
+}
+
+
+
+.widgetTabNav_galerias .imageTabNav:before {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    width: 15px;
+    height: 15px;
+    right: 10px;
+    top: 10px;
+    z-index: 99;
+    border-radius: 2px;
+    box-shadow: 1px -1px 0 0 rgba(0, 0, 0, 0.30), 3px -3px 0 0 rgba(255, 255, 255, 0.30);
+}
+
+
+
+.primaryNav .transmisionesTabNav:before {
+    content: "";
+    left: calc(50% - 17px);
+    top: 68px;
+    width: 0px;
+    height: 0px;
+    border: 34px solid;
+    border-bottom: 26px solid transparent;
+    border-top: 26px solid transparent;
+    border-color: transparent;
+    border-left-color: rgba(255, 255, 255, 0.74);
+    position: absolute;
+    z-index: 999;
+    box-shadow: -10px 0px 10px -10px rgba(0, 0, 0, 0.50);
+}
+
+.primaryNav .transmisionesTabNav:after {
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.17);
+    z-index: 2;
+    -webkit-backdrop-filter: saturate(180%) blur(2px);
+    backdrop-filter: saturate(180%) blur(2px);
+    background-color: rgba(0, 0, 0, 0.20);
+}
+
+
+
+.pruebas.mini a.icon.Ic_gpw-106 {
+    font-size: 32px;
+    color: #FF5722;
+    line-height: 42px;
+}
+
+
+
+.primaryNav #comunicaciones .titleTabNav a:hover {
+    text-decoration: underline;
+}
+
+
+
+.primaryNav .imageTabNav img:hover {
+}
+
+
+
+.primaryNav .imageTabNav img:before {
+    content: "";
+    background: #fff;
+    left: 70px;
+    top: 0;
+    width: 100px;
+    position: absolute;
+    z-index: 999999999999999;
+}
+
+
+
+
+
+/* ultimos ajustes */
+
+li#sobre-nosotros {
+    position: relative;
+}
+
+
+
+    li#sobre-nosotros .ctnTabNav {
+        display: none;
+    }
+
+
+
+#sobre-nosotros .ctnChild_1 {
+    min-width: 240px;
+}
+
+
+
+.primaryNav #sobre-nosotros .ctnChild_1 ul {
+    max-width: inherit;
+    width: 90%;
+}
+
+
+
+li#comunicaciones {
+    position: relative;
+}
+
+
+
+    li#comunicaciones .ctnTabNav {
+        display: none;
+    }
+
+
+
+#comunicaciones .ctnChild_1 {
+    min-width: 240px;
+    min-height: auto;
+}
+
+
+
+.primaryNav #comunicaciones .ctnChild_1 ul {
+    max-width: inherit;
+    width: 90%;
+}
+
+
+
+.widgetTabNav_noticias, .widgetTabNav_transmisiones, .widgetTabNav_galerias {
+    display: none;
+}
+
+
+li#validacion {
+    position: relative;
+}
+
+#validacion .ctnChild_1 {
+    min-width: 270px;
+}
+
+.primaryNav #validacion .ctnChild_1 ul {
+    max-width: inherit;
+    width: 90%;
+}
+
+li#validacion .ctnTabNav {
+    display: none;
+}
+
+li#prevalidacion {
+    position: relative;
+}
+
+#prevalidacion .ctnChild_1 {
+    min-width: 270px;
+}
+
+.primaryNav #prevalidacion .ctnChild_1 ul {
+    max-width: inherit;
+    width: 90%;
+}
+
+li#prevalidacion .ctnTabNav {
+    display: none;
+}
+
+li#reclamaciones {
+    position: relative;
+}
+
+#reclamaciones .ctnChild_1 {
+    min-width: 270px;
+}
+
+.primaryNav #reclamaciones .ctnChild_1 ul {
+    max-width: inherit;
+    width: 90%;
+}
+
+li#reclamaciones .ctnTabNav {
+    display: none;
+}
+
+li#entrevista {
+    position: relative;
+}
+
+#entrevista .ctnChild_1 {
+    min-width: 270px;
+}
+
+.primaryNav #entrevista .ctnChild_1 ul {
+    max-width: inherit;
+    width: 90%;
+}
+
+li#entrevista .ctnTabNav {
+    display: none;
+}
+
+li#usuarios {
+    position: relative;
+}
+
+#usuarios .ctnChild_1 {
+    min-width: 270px;
+}
+
+.primaryNav #usuarios .ctnChild_1 ul {
+    max-width: inherit;
+    width: 90%;
+}
+
+li#usuarios .ctnTabNav {
+    display: none;
+}
+

@@ -1,0 +1,182 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <link href="~/Content/CSS/Entrevista/StyleEntrevista.css" rel="stylesheet" />
+    <style>
+        .btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
+            margin-left: 50px;
+        }
+
+        .btnBotones {
+            padding: 6px 30px;
+        }
+
+        hr.new5 {
+            border: 2px solid #337ab7;
+            border-radius: 5px;
+        }
+
+        .rb-box {
+            width: 80%;
+            max-width: 420px;
+            margin: 50px auto;
+            padding: 1.3em;
+            background: #292942;
+            border-radius: .75em;
+            -webkit-filter: drop-shadow(1px 2px 5px rgba(0,0,0,.3));
+            filter: drop-shadow(1px 2px 5px rgba(0,0,0,.3));
+            box-shadow: 0 2px 2px rgba(243,49,128,.5), 0 0px 5px rgba(243,49,128,.15), 0 0px 4px rgba(0,0,0,.35), 0 5px 20px rgba(243,49,128,.25), 0 15px 50px rgba(243,49,128,.75), inset 0 0 15px rgba(255,255,255,.05);
+        }
+
+        html, body {
+            min-height: 100%;
+        }
+
+        .rb-box {
+            width: 80%;
+            max-width: 420px;
+            margin: 50px auto;
+            padding: 1.3em;
+            background: #292942;
+            border-radius: .75em;
+            -webkit-filter: drop-shadow(1px 2px 5px rgba(0,0,0,.3));
+            filter: drop-shadow(1px 2px 5px rgba(0,0,0,.3));
+            box-shadow: 0 2px 2px rgba(243,49,128,.5), 0 0px 5px rgba(243,49,128,.15), 0 0px 4px rgba(0,0,0,.35), 0 5px 20px rgba(243,49,128,.25), 0 15px 50px rgba(243,49,128,.75), inset 0 0 15px rgba(255,255,255,.05);
+        }
+
+        p {
+            font-size: .9em;
+        }
+
+        .rb {
+            padding: 10px 0;
+            background: rgba(255,255,255,.03);
+            border-radius: .3em;
+        }
+
+        .rb-tab {
+            display: inline-block;
+            position: relative;
+            width: 8%;
+        }
+
+        .rb-txt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1em;
+            color: #000;
+        }
+
+        .rb-spot {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;
+            border: 2px solid #000;
+            border-radius: 100%;
+            cursor: pointer;
+            transition: ease .5s;
+        }
+
+        .rb-tab-active .rb-spot {
+            background: #337ab7;
+            border: 2px solid #000;
+        }
+
+        .button-box {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .buttonEnviar {
+            display: inline-block;
+            width: 80%;
+            margin-top: 1.2em;
+            padding: 1em;
+            max-width: 220px;
+            font-size: .9em;
+            color: #000;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: .15em;
+            background: white;
+            border: solid;
+            outline: none;
+            border-radius: 5em;
+            box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+            transition: color 0.6s, box-shadow 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+            color: #6f6f6f;
+        }
+    </style>
+}
+
+<div id="_containerBuscar" class="container-fluid _cfd">
+    <div class="row">
+        <div class="col-md-6" style="padding-bottom: 15px;">
+            <strong>Nombre completo : </strong><label id="_NombreCompleto"></label>
+        </div>
+        <div class="col-md-6" style="padding-bottom: 15px;">
+            <strong>Centro : </strong><label id="_Centro"></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 align-content-end">
+            <strong>Regional : </strong><label id="_Regional"></label>
+        </div>
+        <div class="col-md-6 align-content-end">
+            <strong>Distrito : </strong><label id="_Distrito"></label>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-12 panel-heading">
+            <i class="fa fa-table"></i> Registro de evaluación
+        </div>
+    </div>
+    <div class="row" style="margin-bottom:25px">
+        <div class="col-md-4">
+            <div class="input-group custom-search-form">
+                <input type="text" id="cedulaCandidato" class="form-control" placeholder="Introduzca la cédula del docente " />
+                <span class="input-group-btn">
+                    <button class="btn btn-info btn-cicle" onclick="obtenerDatos()"
+                            id="btnBuscarCedula"
+                            type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+                <span class="input-group-btn">
+                    <button class="btn  btn-danger btn-cicle" onclick="ReiniciarEvaluacion()"
+                            id="btnBorrarEntrevista"
+                            type="button">
+                        <i class="fa fa-ban"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="grupoPreguntas">
+
+</div>
+@section Scripts {
+
+    @Scripts.Render("~/Scripts/sweetalert.min.js")
+    @Scripts.Render("~/Scripts/jquery.mask.js")
+    <script src="~/Scripts/Evaluacion/evaluacion.js"></script>
+}

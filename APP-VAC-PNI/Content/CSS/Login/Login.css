@@ -1,0 +1,277 @@
+﻿body {
+    margin: 0;
+    background-color: #1c3048;
+    font-family: 'Open Sans';
+}
+
+.loginBox {
+    max-width: 900px;
+    background: #fff;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    height: 400px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    top: 200px;
+    box-shadow: 0 130px 240px -80px #092133;
+}
+
+.leftBox {
+    width: calc(50% - 40px);
+    height: 400px;
+    float: left;
+    padding: 0 40px;
+    position: relative;
+    box-shadow: 0 0 0 0 #ccc;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.leftBox h3 {
+        font-size: 21px;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-family: 'Open Sans';
+        color: #004e8c;
+    }
+
+        .leftBox h3:before {
+            content: "";
+            display: block;
+            position: absolute;
+            background: #3fa9f5;
+            height: 18px;
+            width: 10px;
+            top: 26px;
+            left: 0;
+        }
+
+.rightBox {
+    width: calc(50% - 40px);
+    height: 400px;
+    float: right;
+    position: relative;
+    background-image: url("../../Imagenes/loginpic.jpg");
+    -ms-background-position: center;
+    background-position: center;
+    -ms-background-size: cover;
+    background-size: cover;
+    -ms-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    box-shadow: inset 0 0 0 200px #075592, inset 0 0 150px 0 #000;
+    /* ReSharper disable once CssBrowserCompatibility */
+    box-shadow: inset 0 0 0 200px rgba(7, 85, 146, 0.8), inset 0 0 150px 0 #000;
+}
+
+
+
+.form-group {
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 0 0 1px #ccc;
+    margin: 30px 0;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: relative;
+}
+
+.form-group input {
+        background: transparent;
+        border: 0;
+        color: #5f5f5f;
+        padding: 5px 0 0 10px;
+        display: block;
+        width: 96%;
+        outline: none;
+        font-size: 14px;
+    }
+
+    .form-group label {
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #b3b3b3;
+        margin-left: 10px;
+    }
+
+.boxHelp {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+
+    .boxHelp a {
+        font-size: 11px;
+        text-transform: uppercase;
+        color: rgb(165, 218, 243);
+        font-weight: 300;
+        text-decoration: none;
+        float: right;
+    }
+
+.login-footer .requestPass {
+    width: 50%;
+    float: left;
+}
+
+.login-footer button {
+    width: 100%;
+    float: left;
+}
+
+.login-footer .btn {
+    border: 0;
+    color: #ffffff;
+    background: #3fa9f5;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    min-width: 150px;
+    text-align: center;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    margin: 15px 0 0 0;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 995px) {
+
+    .serviciosList li.tool span.info, .serviciosList li.tool span.enter {
+        right: 3px;
+    }
+}
+
+@media only screen and (min-width: 560px) and (max-width: 768px) {
+
+    .botonesAccesos {
+        height: 125px;
+        padding: 0 0 40px 0;
+    }
+
+        .botonesAccesos a.btn {
+            width: calc(100% - 20px);
+            margin: 0 0 10px 0;
+        }
+
+    .serviciosList li.tool span.info, .serviciosList li.tool span.enter {
+        right: 3px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+
+    .botonesAccesos {
+        height: 125px;
+        padding: 0 0 40px 0;
+    }
+
+        .botonesAccesos a.btn {
+            width: calc(100% - 20px);
+            margin: 0 0 10px 0;
+        }
+}
+
+@media only screen and (max-width: 479px) {
+
+    .rightBox {
+        display: none;
+    }
+
+    .leftBox {
+        width: 82%;
+    }
+
+    .footerText {
+        width: 260px;
+        left: calc(50% - 130px);
+        bottom: -60px;
+    }
+
+    .serviciosList li.tool span.info, .serviciosList li.tool span.enter {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 357px) {
+
+    .leftBox {
+        width: 75%;
+    }
+}
+
+.requestPass a {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    display: block;
+    color: #075592;
+    /* ReSharper disable once CssBrowserCompatibility */
+    color: rgba(7, 85, 146, 0.8);
+}
+
+.form-group:active {
+    box-shadow: 0 1px 0 0 #3fa9f5;
+}
+
+.form-group:hover {
+    box-shadow: 0 0 0 1px #3fa9f5;
+}
+
+    .form-group:hover > label {
+        color: #3fa9f5;
+    }
+
+.sysLogo img {
+    width: 150px;
+}
+
+.sysLogo {
+    display: table;
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 70px);
+}
+
+.footerText {
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 227px);
+    font-size: 11px;
+    font-weight: 300;
+    color: #69809c;
+    /* width: 100%; */
+    display: inline-table;
+    text-align: center;
+}
+
+.form-group label:before {
+    content: "";
+    background: #304258;
+    width: 100%;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+span.help-block {
+    font-size: 12px;
+    font-style: italic;
+    color: #E91E63;
+    position: absolute;
+    top: 64px;
+    left: 5px;
+    /* background: #fff; */
+    padding: 5px;
+}
+
+.swal-text {
+    text-align: center;
+}

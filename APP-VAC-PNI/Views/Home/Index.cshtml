@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+}
+
+@section Styles{
+    @Styles.Render("~/Content/custom-style.css")
+    @Styles.Render("~/Content/sweetAlert.css")
+    @Styles.Render("~/Content/media.css")
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:200,300,400,500i,700" rel="stylesheet">
+    @Styles.Render("~/Content/gif.css")
+
+    <style type="text/css">
+        .modal {
+            overflow: scroll;
+        }
+
+        .FechaComisionEvaluadora {
+            background-color: #fff
+        }
+    </style>
+}
+
+@*!important*@
+
+<div id="GifContainer" class="hidden">
+</div>
+
+<div class="col-md-12" style="text-align:center;">
+    <h2 style="text-align: center; text-transform: uppercase;" >
+        Sistema de  Evaluación a docentes de nuevo ingreso 2023-@DateTime.Now.Year
+    </h2>
+    <br />
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div style="display: flex; justify-content: center;">
+            <a style="margin-left: 2%" href='@Url.Action("Crear","Entrevista")'>
+                <img href='@Url.Action("Crear","Entrevista")' src="~/Content/App/Index/OP.png" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<div style="padding-bottom: 5%;">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div style="display: flex; justify-content: center;">
+                <a class="btn btn-primary" style="background-color: #003876" href='@Url.Action("Index","Evaluacion")'>
+                    Realizar Evaluación
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="padding-bottom: 24.8%;">
+    <div class="col-md-12">
+        <br /><br /><br />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5>Listado de evaluados</h5>
+                    </div>
+                    <div class="panel-body form-horizontal">
+                        <div class="tab-content">
+                            <div class="tab-content">
+                                <div class="" id="ConsultaCandidatosPanel">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div id="tblUsuarios_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6"></div>
+                                                    <div class="col-sm-12 col-md-6"></div>
+                                                </div>
+                                                <div class="row">
+                                                    <!-- Contenedor de la tabla -->
+                                                    <div id="tabla-container">
+                                                        <table id="mi-tabla" class="table table-bordred table-striped dataTable no-footer" role="grid" aria-describedby="tblUsuarios_info" style="width: 1111px;">
+                                                            <thead>
+                                                                <tr role="row">
+                                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 25px;">Id</th>
+                                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 85px;">Cedula</th>
+                                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 330px;">Nombre</th>
+                                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 50px;">Estado</th>
+                                                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 80px;">Fecha de evaluación</th>
+                                                            </thead>
+                                                            <tbody></tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <!-- Contenedor de los botones de paginación -->
+                                                    <nav aria-label="Paginación">
+                                                        <ul class="pagination" id="paginacion"></ul>
+                                                    </nav>
+                                                    @*<div class="col-sm-12" id="htmlHomeTable">
+            <table id="tblUsuarios" class="table table-bordred table-striped dataTable no-footer" role="grid" aria-describedby="tblUsuarios_info" style="width: 1111px;">
+                <thead>
+                    <tr role="row">
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 79px;">Id</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 156px;">Cedula</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 156px;">Nombre</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 227px;">Estado</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 79px;">Fecha de creación</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div id="paginacion"></div>
+        </div>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    @Scripts.Render("~/Scripts/sweetalert.min.js")
+    @Scripts.Render("~/Scripts/jquery.mask.js")
+    @Scripts.Render("~/Scripts/App/Home.js")
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}

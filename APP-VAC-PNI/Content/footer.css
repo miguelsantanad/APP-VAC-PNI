@@ -1,0 +1,378 @@
+/*** FOOTER ***/
+ 
+    .boxid_.footerDecentralizadas ul,.boxid_.footerNav ul,.boxid_.footerInfo ul,.boxid_.footerCopyright ul {
+        margin: 0;
+        padding: 0;
+    }
+ 
+    .boxid_.footerDecentralizadas ul li,.boxid_.footerNav ul li,.boxid_.footerInfo ul li,.boxid_.footerCopyright ul li {
+        list-style: none;
+    }
+ 
+    .boxid_.footerDecentralizadas ul li {
+        float: left;
+        width: 16.66%;
+        display: table;
+        padding: 10px 0;
+    }
+ 
+    .boxid_.footerDecentralizadas ul li a {
+        display: table-cell;
+        overflow: hidden;
+        position: relative;
+        height: 60px;
+        width: 100%;
+        text-align: center;
+        vertical-align: middle;
+    }
+ 
+    .boxid_.footerDecentralizadas ul li a img {
+        max-width: 90%;
+    }
+ 
+    .boxid_.footerNav{
+        background: #232731;
+        padding: 50px 0;
+    }
+ 
+    .boxid_ .ctnFooterNav ul {
+        float: left;
+        max-width: 20%;
+        min-width: 15%;
+        font-size: 13px;
+        line-height: 16px;
+        padding-right: 2%;
+    }
+ 
+    .boxid_ .ctnFooterNav ul li {
+        color: #78899c;
+        position: relative;
+    }
+ 
+    .boxid_ .ctnFooterNav ul li a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        padding: 8px 0px;
+    }
+    .boxid_ .ctnFooterNav ul li a:hover {
+        text-decoration: underline;
+        color: #a6b9ca;
+    }
+ 
+    .footerNav .titleList {
+        color: #c3d0dc;
+        text-transform: uppercase;
+        margin: 0 0 20px 0;
+        display: block;
+    }
+ 
+    .footerNav .icon {
+        float: left;
+        margin-right: 6px;
+        margin-top: 0px;
+        font-size: 18px;
+        color: inherit;
+    }
+ 
+    .boxid_.footerInfo {
+        background: #1d212b;
+        padding: 40px 0;
+        min-height: 110px;
+    }
+ 
+    .footerInfo .ftLogoMinerd{
+        padding-bottom: 30px;
+    }
+ 
+ 
+    .boxid_.footerCopyright {
+        background: #1d212b;
+    }
+ 
+    .boxid_.footerCopyright {
+        border-top: 1px solid #282d38;
+        padding: 20px 0;
+    }
+ 
+    .insigniasNORTIC {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+ 
+    .boxid_.footerInfo .grid-container {
+        position: relative;
+    }
+ 
+    .ctnFotterInfo {
+        text-align: center;
+        color: #78899c;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0 20px;
+    }
+ 
+    .insigniasNORTIC ul li {
+        float: left;
+        margin-left:2px;
+    }
+ 
+    .insigniasNORTIC ul li img {
+        max-width:72px;
+        margin-top: -20px;
+    }
+ 
+    .boxid_.footerCopyright ul {
+        font-size: 13px;
+        color: #78899c;
+    }
+ 
+    .boxid_.footerCopyright ul li {
+        padding-left: 5px;
+    }
+ 
+    .boxid_.footerCopyright .Copyright ul li {
+       float: left;
+    }
+ 
+    .boxid_.footerCopyright .Copyright ul li a {
+       text-decoration: none;
+       color: inherit;
+       padding: 5px;
+    }
+ 
+    .boxid_.footerCopyright .Copyright ul li a:hover {
+       text-decoration: underline;
+       color: #a6b9ca;
+    }
+ 
+    .boxid_.EnterateSeccion {
+        background: #ffffff;
+    }
+ 
+    .portadaNtcPrinc .itemPost .titlePost:hover {
+        color: #2793e6;
+    }
+ 
+    .portadaNotc4Rows .titlePost:hover {
+        color: #2793e6;
+    }
+ 
+    .ntcEnterateSeccion .datePost, .ntcEnterateSeccion .titlePost:hover {
+        color: #0056a6;
+    }
+ 
+    .ntcEnterateSeccion .programasPtd li:hover, .ntcEnterateSeccion .programasPtd li a:hover {
+        color: #fff;
+    }
+ 
+    .ctnFotterInfo ul li a {
+        color: inherit;
+    }
+/*** FIN ***/
+ 
+/*** SOCIAL BUTTONS ***/
+ 
+    .ntcPiesEscuelas .titlePost a {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22px;
+        color: #fff;
+        margin: 6px 0;
+        transition: 0.3s;
+   }
+ 
+    h2.titlePost.titleVideoPortada a:hover {
+        text-decoration: underline;
+    }
+ 
+    .ntcEnterateSeccion .datePost, .ntcEnterateSeccion .titlePost a:hover {
+        color: #0056a6;
+    }
+ 
+    .shortcutButton .ctnShortcutButtons ul {
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 15px;
+        border-radius: 2px;
+        box-shadow: 0px 0px 24px -10px #003767, inset 0px -310px 154px -150px rgba(0, 55, 103, 0.06); */
+        border-bottom: 2px solid #3fa9f5;
+        border-bottom: 2px solid #3fa9f5;
+    }
+ 
+    .shortcutButton .ctnShortcutButtons .titleShortcut {
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 28px;
+        color: #0056a6;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        }
+ 
+    .boxPost_ .itemPost a:hover {
+        color: #2793e6;
+    }
+ 
+    .ntcPiesEscuelas .titlePost a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+ 
+    .boxid_.socialIconsSection {
+        background: #232731;
+        height: 160px;
+        overflow: hidden;
+        box-shadow: inset 0 180px 120px -120px rgba(0, 86, 166, 0.11);
+        display: block;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.1);
+    }
+ 
+    .boxid_.socialIconsSection .tituloRedes {
+        display: table;
+        font-size: 22px;
+        font-weight: 100;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        width:100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+ 
+    ul {}
+ 
+    .boxid_.socialIconsSection  ul {
+        margin: 36px auto 0 auto;
+        padding: 0;
+        list-style: none;
+        display: table;
+        position: relative;
+    }
+ 
+    .boxid_.socialIconsSection  ul li {
+        display: table;
+        height: 30px;
+        float: left;
+        padding: 10px;
+        margin: 0 14px;
+        position: relative;
+    }
+ 
+    .boxid_.socialIconsSection  ul li span.tooltip {
+        visibility: hidden;
+        opacity: 0;
+        padding: 5px 1%;
+        display: block;
+        transition: ease all 0.3s;
+        position: absolute;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.5);
+        top: -30px;
+        left: calc(50% - 30px);
+        width: 98%;
+        text-align: center;
+        font-size: 10px;
+        border-radius: 3px;
+    }
+ 
+    .boxid_.socialIconsSection  ul li a {
+        color: #fff;
+        font-size: 24px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        padding: 8px;
+        transition: ease all 0.3s;
+    }
+ 
+    .boxid_.socialIconsSection  ul li a.icon.Ic_gpw-90:hover {
+        background: #3B5998;
+        color: #fff;
+    }
+    .boxid_.socialIconsSection  ul li a.icon.Ic_gpw-91:hover {
+        background: #FC1685;
+        color: #fff;
+    }
+    .boxid_.socialIconsSection  ul li a.icon.Ic_gpw-92:hover {
+        background: #cd486b;
+        background: linear-gradient(-145deg, #8a3ab9, #cd486b, #fbad50);
+        color: #fff;
+    }
+    .boxid_.socialIconsSection  ul li a.icon.Ic_gpw-93:hover {
+        background: #127CB4;
+        color: #fff;
+    }
+    .boxid_.socialIconsSection  ul li a.icon.Ic_gpw-96:hover {
+        background: #1DA1F2;
+        color: #fff;
+    }
+    .boxid_.socialIconsSection  ul li a.icon.Ic_gpw-97:hover {
+        background: #C8312B;
+        color: #fff;
+    }
+ 
+    .boxid_.socialIconsSection  ul li:hover > span.tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+ 
+ 
+    .boxid_.socialIconsSection  ul li span.tooltip:after {
+        content: "";
+        border-top: 4px solid rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid transparent;
+        border-right: 5px solid transparent;
+        border-left: 4px solid transparent;
+        position: absolute;
+        bottom: -5px;
+        left: 26px;
+    }
+/*** FIN ***/
+ 
+.boxid_ .ctnFooterNav ul .ctnBtn a {
+    display: inline-block;
+    background: rgba(79, 82, 90, 0.61);
+    padding: 5px 10px;
+   border-radius: 2px;
+    color: #c3d0dc;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin: 10px 0;
+}
+ 
+ 
+ 
+/*dependencias*/
+ 
+.boxid_ .ctnFooterNav ul li ul {
+    position: absolute;
+    right: 10px;
+    background: #fff;
+    display: table;
+    width: 190px;
+    z-index: 99;
+    border-radius: 1px;
+    top: 0;
+    display: none;
+}
+ 
+.boxid_ .ctnFooterNav ul li ul li a {
+    padding: 12px;
+}
+ 
+.boxid_ .ctnFooterNav ul li ul:before {
+    content: "";
+    border-right: 10px solid #fff;
+    border-left: 10px solid rgba(255, 255, 255, 0);
+    border-top: 10px solid rgba(255, 255, 255, 0);
+    border-bottom: 10px solid rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 5px;
+    left: -20px;
+}
+ 
+.boxid_ .ctnFooterNav ul li:hover ul {
+    display: table;
+}

@@ -1,0 +1,73 @@
+﻿body {
+    font-family: 'Open Sans';
+}
+
+.ml-2 {
+    margin-left: 5px !important;
+}
+
+.mt-1 {
+    margin-top: 5px;
+}
+
+a {
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.error {
+    border-color: red !important;
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+img.header-banner {
+    width: 75px;
+}
+
+h5.header-banner {
+    display: inline-block
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.form-group-padding {
+    padding: 5px 10px !important;
+}
+
+.navbar-header-img {
+    float: left;
+    max-height: 5%;
+    max-width: 5%;
+}
+
+.navbar-brand {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+th.dt-center {
+    text-align: center;
+}
+
+td.dt-width {
+    width: 12.5%;
+}
+
+td.dt-width-action {
+    width: 5%;
+    text-align: center;
+}

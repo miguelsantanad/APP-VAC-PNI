@@ -1,0 +1,30 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.0.x'
+
+# Restaurar herramientas declaradas en .config/dotnet-tools.json
+- script: |
+    dotnet tool restore
+  
+  displayName: "Restaurar DocFX"
+
+# Generar Markdown
+- script: |
+    dotnet tool run docfx -- metadata
+    dotnet tool run docfx -- build --exportRawModel --export
+  workingDirectory: 'APP-VAC-PNI'   # carpeta donde está tu docfx.json
+  displayName: "DocFX build"
+

@@ -1,0 +1,115 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+
+# Starter pipeline
+
+trigger:
+- none
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+  - task: NuGetToolInstaller@1
+
+  - task: NuGetCommand@2
+    displayName: 'Nuget V2 Restore'
+    inputs:
+      command: restore
+      restoreSolution: '$(solution)'
+      feedsToUse: select
+      vstsFeed: 'APP-VAC_PNI'
+      includeNuGetOrg: true
+
+  - task: VSBuild@1
+    inputs:
+      solution: '$(solution)'
+      msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfiguration=true'
+      platform: '$(buildPlatform)'
+      configuration: '$(buildConfiguration)'
+
+  - task: VSTest@2
+    inputs:
+      platform: '$(buildPlatform)'
+      configuration: '$(buildConfiguration)'
+
+  # === Generar .order recursivo y Home.md ===
+  - task: PowerShell@2
+    displayName: 'Generar .order para Wiki (recursivo)'
+    inputs:
+      targetType: 'inline'
+      script: |
+        $ErrorActionPreference = 'Stop'
+
+        # Carpeta fuente de tu Wiki dentro del repo
+        $root = Join-Path '$(Build.SourcesDirectory)' 'APP-VAC-PNI'
+        if (-not (Test-Path $root)) {
+          throw "No existe la carpeta de Wiki: $root"
+        }
+
+        # Asegura Home.md en la raíz
+        $homeMd = Join-Path $root 'Home.md'
+        if (-not (Test-Path $homeMd)) {
+          '# Inicio' | Set-Content -Path $homeMd -Encoding utf8
+          Write-Host 'Creado Home.md (básico)'
+        }
+
+        function New-Or-UpdateOrder {
+          param([string]$dir)
+
+          # Home.md primero, luego resto de .md alfabético, luego subcarpetas
+          $files = Get-ChildItem -Path $dir -File -Filter '*.md' | Sort-Object Name
+          $home  = $files | Where-Object { $_.Name -ieq 'Home.md' }
+          $other = $files | Where-Object { $_.Name -ine 'Home.md' }
+          $dirs  = Get-ChildItem -Path $dir -Directory | Sort-Object Name
+
+          $lines = @()
+          if ($home) { $lines += $home.Name }
+          $lines += ($other | ForEach-Object { $_.Name })
+          $lines += ($dirs  | ForEach-Object { "$($_.Name)/" })
+
+          $orderPath = Join-Path $dir '.order'
+          $new = ($lines -join "`r`n") + "`r`n"
+
+          if (-not (Test-Path $orderPath) -or (Get-Content $orderPath -Raw) -ne $new) {
+            $new | Set-Content -Path $orderPath -Encoding utf8
+            Write-Host "Actualizado: $orderPath"
+          } else {
+            Write-Host "Sin cambios: $orderPath"
+          }
+
+          foreach ($d in $dirs) {
+            New-Or-UpdateOrder -dir $d.FullName
+          }
+        }
+
+        New-Or-UpdateOrder -dir $root
+
+  # (Opcional) Asegura que la carpeta destino exista
+  - task: PowerShell@2
+    displayName: 'Crear carpeta destino para DocFx'
+    inputs:
+      targetType: 'inline'
+      script: |
+        $dst = Join-Path '$(Build.SourcesDirectory)' 'APP-VAC-PNI\Docs'
+        if (-not (Test-Path $dst)) {
+          New-Item -ItemType Directory -Path $dst -Force | Out-Null
+          Write-Host "Creada carpeta: $dst"
+        } else {
+          Write-Host "Destino ya existe: $dst"
+        }
+
+  # === Extensión que pedía el .order ===
+  - task: AzureDevOpsWikiToDocFx@3
+    displayName: 'AzureDevOpsWikiToDocFx (convertir Wiki)'
+    inputs:
+      SourceFolder: '$(Build.SourcesDirectory)\APP-VAC-PNI'
+      TargetFolder: '$(Build.SourcesDirectory)\APP-VAC-PNI\Docs'

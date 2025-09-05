@@ -1,0 +1,42 @@
+﻿.custom-container {
+    width: 100%;
+    height: 450px;
+    overflow: auto;
+}
+
+.pdf-container {
+    width: 100%;
+    height: 450px;
+    overflow: unset;
+}
+
+.down-right {
+    position: absolute;
+    top: 175px;
+    right: 25px;
+}
+
+    .down-right > * {
+        margin: 0 5px;
+    }
+
+#CheckBoxContainer {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.comment-wrapper .panel-body {
+    max-height: 350px;
+    overflow: auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom: 1px dashed #efefef;
+    margin-bottom: 25px;
+}

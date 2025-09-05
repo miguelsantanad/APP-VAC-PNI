@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  docker.azure:
+    image: ${DOCKER_REGISTRY-}docker
+    build:
+      context: .
+      dockerfile: APP-VAC-PNI/Dockerfile

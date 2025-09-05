@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>SISTEMA DE EVALUACIÓN DOCENTE DE NUEVO INGRESO</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100,300,400,500,700">
+    <link rel="shortcut icon" href="~/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/img/favicon/favicon.ico" type="image/x-icon">
+    <link href="~/Template/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    @Styles.Render("https://apps.minerd.gob.do/resources/headerfooter/css/grid.css")
+    @Styles.Render("https://apps.minerd.gob.do/resources/headerfooter/css/base.css")
+    @Styles.Render("https://apps.minerd.gob.do/resources/headerfooter/css/normalize.css")
+    @Styles.Render("https://apps.minerd.gob.do/resources/headerfooter/css/header.css")
+    @Styles.Render("https://apps.minerd.gob.do/resources/headerfooter/css/primaryNav.css")
+    @Styles.Render("https://apps.minerd.gob.do/resources/headerfooter/css/media.css")
+    @Styles.Render("https://apps.minerd.gob.do/resources/headerfooter/css/footer.css")
+    @Styles.Render("~/Content/bootstrap-3.4.1.min.css")
+    @Styles.Render("~/Content/gif.css")
+    @Styles.Render("~/Scripts/theme-ui/jquery-ui.css")
+    @Styles.Render("~/Template/vendor/datatables/dataTables.bootstrap4.css")
+    <link href="~/Template/css/toastr.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .panel-heading span {
+            margin-top: -20px;
+            font-size: 15px;
+        }
+
+        .customLabel label {
+            font-weight: normal;
+        }
+    </style>
+    @RenderSection("Styles", false)
+</head>
+<body>
+    <div id="GifContainer" class="hidden">
+    </div>
+
+    <!-- HEADER -->
+    <div id="cabecera" class="boxid_ header">
+        <div class="rdHeaderMobile l_hidden">
+            <div class="container">
+                <div class="rdIdentity">República Dominicana</div>
+            </div>
+        </div>
+
+        <div class="ctn_header">
+            <div class="container">
+                <div class="nav_right">
+                    <div class="boxSearch">
+                    </div>
+                </div>
+
+                <div class="nav_left">
+                    <div class="logo" style="width: 125px;">
+                        <a href='@Url.Action("Index","Home")'><img src="https://apps.minerd.gob.do/resources/Images/logo-header-aplicaciones.png" alt="Logo institucional del ministerio de educación de la República Dominicana" title="Logo institucional del ministerio de educación de la República Dominicana"></a>
+                    </div>
+                </div>
+                <div class="nav_main"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FIN -->
+    <!-- MENU -->
+    <div class="boxid_ nav m_hidden">
+        <div class="container grid-container">
+            <div class="grid_12">
+                <div class="primaryNav">
+                    <ul>
+                        <li>
+                            <a href='@Url.Action("Index","Home")'>Inicio</a>
+                        </li>
+                        <li id="entrevista" class="parent">
+                            <a href="#">Evaluación</a>
+                            <div class="ctnChild_1">
+
+                                <ul class="tabNav">
+                                    <li class="active">
+                                        <span style="color: #5386b5;" class="icPrimaryNav fa fa-lg fa-check-square"></span>
+                                        <a href='@Url.Action("Index","Evaluacion")' meta-tab="Crear Entrevista">Realizar Evaluación</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        @*<li id="usuarios" class="parent">
+                            <a href="#">Usuarios</a>
+                            <div class="ctnChild_1">
+                                <ul class="tabNav">
+                                    <li>
+                                        <span style="color: #5386b5;" class="icPrimaryNav fa fa-lg fa-users"></span>
+                                        <a href='@Url.Action("Create", "Usuario")' meta-tab="Usuarios">Usuarios</a>
+                                    </li>
+                                </ul>
+                                <ul class="tabNav">
+                                    <li>
+                                        <span style="color: #5386b5;" class="icPrimaryNav fa fa-lg fa-unlock-alt"></span>
+                                        <a href='@Url.Action("Index", "Accesos")' meta-tab="Accesos">Accesos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>*@
+                        <li style="float: right !important;">
+                            <a href='@Url.Action("Logoff", "Login")'>Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MENU -->
+
+    <div class="boxid_ navMobile l_hidden">
+        <div class="container">
+            <div class="grid_12">
+                <div class="barNav">
+                    <div class="ctnSearchMobile">
+                        <form action="http://www.educacion.net.do/busqueda" method="GET">
+                            <div class="boxinput">
+                                <input type="text" name="buscar" placeholder="¿Qué estás buscando?" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="ctnBtnNavMobile">
+                        <div class="btn_navMobile">
+                            <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 63 169 245 1">
+                                <rect width="100%" height="14" x="0%" y="18" class="gh-svg-rect gh-svg-rect-top"></rect>
+                                <rect width="100%" height="14" x="0%" y="54" class="gh-svg-rect gh-svg-rect-center"></rect>
+                                <rect width="100%" height="14" x="0%" y="90" class="gh-svg-rect gh-svg-rect-bottom"></rect>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="primaryNavMobile hidden">
+                    <ul>
+                        <li><a href="http://www.educacion.net.do/">Inicio</a></li>
+                        <li><a href="http://www.educacion.net.do/sobre-nosotros/quienes-somos">Sobre nosotros</a></li>
+                        <li><a href="http://www.educacion.net.do/sobre-nosotros/dependencias">Dependencias</a></li>
+                        <li><a href="http://www.educacion.net.do/sobre-nosotros/despacho-del-ministro/biografia">Despacho del Ministro</a></li>
+                        <li><a href="http://www.educacion.net.do/sobre-nosotros/marco-legal">Marco Legal</a></li>
+                        <li><a href="http://www.educacion.net.do/servicios">Servicios</a></li>
+                        <li><a href="http://www.educacion.net.do/transparencia">Transparencia</a></li>
+                        <li><a href="http://www.educacion.net.do/terminos-de-uso">Términos de uso</a></li>
+                        <li><a href="http://www.educacion.net.do/politicas-de-privacidad">Políticas de privacidad</a></li>
+                        <li><a href="http://www.educacion.net.do/preguntas-frecuentes">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN -->
+
+    <div class="container body-content customLabel">
+        <div class="row text-xl-center">
+            @RenderBody()
+        </div>
+        <div class="row pull-left" style="margin-right:8px;width:100%">
+        </div>
+    </div>
+
+    <div id="footer" class="boxid_ footerInfo"></div>
+
+    @Scripts.Render("~/Scripts/jquery-3.3.1.min.js")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/core.js")
+    @Scripts.Render("~/Scripts/jquery.maskedinput.js")
+    @Scripts.Render("~/Scripts/ui/jquery-ui.js")
+    @Scripts.Render("~/Scripts/sweetalert.min.js")
+    @Scripts.Render("~/Scripts/jquery.dataTables.js")
+    @Scripts.Render("~/Scripts/dataTables.bootstrap4.js")
+
+    <script src="~/Scripts/ui/jquery-ui.js"></script>
+    <script src="~/Scripts/Reclamacion/helpers.js"></script>
+
+    <script type="text/javascript">
+        if (!window.location.origin) {
+            window.location.origin = window.location.protocol + "//"
+                + window.location.hostname
+                + (window.location.port ? ':' + window.location.port : '');
+        }
+        var ruta = window.location.origin + '@Url.Content("~")';
+        var directorioVirtual = '@Url.Content("~")';
+        var origen = conseguirOrigen(directorioVirtual);
+
+        var goToOrigin = function() {
+            window.location.href = origen;
+        }
+
+        var goToCategorias = function () {
+            window.location.href = `${origen}Categoria`;
+        }
+
+        var logOut = function () {
+            $.ajax({
+                url: `${origen}/api/Login/LogOut`,
+                method: "GET",
+                success: function (result) {
+                    window.location.href = `${origen}Login/IniciarSesion`;
+                }
+            });
+        }
+
+    </script>
+    <script src="~/Scripts/Formulario/Common.js"></script>
+    @RenderSection("scripts", required: false)
+    <script src="~/Template/js/root_local.js"></script>
+</body>
+</html>
+
+
