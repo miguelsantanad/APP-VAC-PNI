@@ -1,13 +1,9 @@
-# Instalar y Configurar APP-VAC-PNI
+# APP-VAC-PNI
 
 Configurar Bono Escolar en las Diferentes Ambientes ya se Produccion o Desarrollo.
+# Consulta a estructura Bono A mil
+https://deepwiki.com/miguelsantanad/APP-VAC-PNI
 
-## Porque Azure Repos?
-
-- [x] Consistent development environment for the entire team.
-- [x] You don't need to install a bunch of language environments on your system.
-- [x] You can use different versions of the same programming language.
-- [x] Deployment is easy
 
 ## Como instalar el proyecto
 
